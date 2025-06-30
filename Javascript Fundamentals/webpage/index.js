@@ -26,3 +26,11 @@
 // console.log(food);
 // console.log(`You, ${firstName}, like ${food}`);
 
+// let online = false;
+// let sale = true;
+
+// console.log(typeof online)
+// console.log(`Louis is online: ${online}`)
+// console.log(`Is this car for sale: ${sale}`)
+
+
