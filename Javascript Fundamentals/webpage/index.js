@@ -42,15 +42,15 @@
 // document.getElementById("paragraph3").textContent = `You are a current student: ${student}`;
 
 // user input
-let username;
+// let username;
 
 // // window prompt
 // // username = window.prompt("What's your username?");
 
 // console.log(username)
 
-document.getElementById("submit").onclick = () => {
-    username = document.getElementById("text").value;
-    // console.log(username);
-    document.getElementById("header1").textContent = `Hello ${username}`;
-}
+// document.getElementById("submit").onclick = () => {
+//     username = document.getElementById("text").value;
+//     // console.log(username);
+//     document.getElementById("header1").textContent = `Hello ${username}`;
+// }
