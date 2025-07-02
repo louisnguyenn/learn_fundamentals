@@ -33,10 +33,24 @@
 // console.log(`Louis is online: ${online}`)
 // console.log(`Is this car for sale: ${sale}`)
 
-let name = "Louis Nguyen"
-let age = 19;
-let student = true;
+// let name = "Louis Nguyen"
+// let age = 19;
+// let student = true;
 
-document.getElementById("paragraph1").textContent = `Your name is ${name}`;
-document.getElementById("paragraph2").textContent = `You are ${age} years old`;
-document.getElementById("paragraph3").textContent = `You are a current student: ${student}`;
+// document.getElementById("paragraph1").textContent = `Your name is ${name}`;
+// document.getElementById("paragraph2").textContent = `You are ${age} years old`;
+// document.getElementById("paragraph3").textContent = `You are a current student: ${student}`;
+
+// user input
+let username;
+
+// // window prompt
+// // username = window.prompt("What's your username?");
+
+// console.log(username)
+
+document.getElementById("submit").onclick = () => {
+    username = document.getElementById("text").value;
+    // console.log(username);
+    document.getElementById("header1").textContent = `Hello ${username}`;
+}
