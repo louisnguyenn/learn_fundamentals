@@ -55,36 +55,37 @@
 //     document.getElementById("header1").textContent = `Hello ${username}`;
 // }
 
-const myCheckbox = document.getElementById("myCheckbox");
-const visaButton = document.getElementById("visaButton");
-const mastercardButton = document.getElementById("mastercardButton");
-const PayPalButton = document.getElementById("PayPalButton");
-const submitButton = document.getElementById("submitButton");
-const result = document.getElementById("result");
-const paymentResult = document.getElementById("paymentResult");
+// const myCheckbox = document.getElementById("myCheckbox");
+// const visaButton = document.getElementById("visaButton");
+// const mastercardButton = document.getElementById("mastercardButton");
+// const PayPalButton = document.getElementById("PayPalButton");
+// const submitButton = document.getElementById("submitButton");
+// const result = document.getElementById("result");
+// const paymentResult = document.getElementById("paymentResult");
 
-submitButton.onclick = () => {
-    if (myCheckbox.checked === true) {
-        result.textContent = `You are subscribed`;
-    }
+// submitButton.onclick = () => {
+//     if (myCheckbox.checked === true) {
+//         result.textContent = `You are subscribed`;
+//     }
 
-    else {
-        result.textContent = `You are not subscribed`;
-    }
+//     else {
+//         result.textContent = `You are not subscribed`;
+//     }
 
-    if (visaButton.checked === true) {
-        paymentResult.textContent = `You are paying with Visa`;
-    }
+//     if (visaButton.checked === true) {
+//         paymentResult.textContent = `You are paying with Visa`;
+//     }
 
-    else if (mastercardButton.checked === true) {
-        paymentResult.textContent = `You are paying with Mastercard`;
-    }
+//     else if (mastercardButton.checked === true) {
+//         paymentResult.textContent = `You are paying with Mastercard`;
+//     }
 
-    else if (PayPalButton.checked === true) {
-        paymentResult.textContent = `You are paying with PayPal`;
-    }
+//     else if (PayPalButton.checked === true) {
+//         paymentResult.textContent = `You are paying with PayPal`;
+//     }
 
-    else {
-        paymentResult.textContent = `You must select a payment type`;
-    }
-}
+//     else {
+//         paymentResult.textContent = `You must select a payment type`;
+//     }
+// }
+
