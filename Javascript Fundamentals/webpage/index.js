@@ -113,4 +113,8 @@ displayConsole = (result) => {
     console.log(result);
 }
 
-sum(displayConsole, 1, 2);
+displayPage = (result) => {
+    document.getElementById("header").textContent = result;
+}
+
+sum(displayPage, 1, 2);
