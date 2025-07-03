@@ -89,17 +89,17 @@
 //     }
 // }
 
-hello = (callback) => {
-    console.log("Hello!");
-    callback();
-}
+// hello = (callback) => {
+//     console.log("Hello!");
+//     callback();
+// }
 
-goodbye = () => {
-    console.log("Goodbye!");
-}
+// goodbye = () => {
+//     console.log("Goodbye!");
+// }
 
-leave = () => {
-    console.log("Leave!");
-}
+// leave = () => {
+//     console.log("Leave!");
+// }
 
-hello(goodbye);
+// hello(goodbye);
