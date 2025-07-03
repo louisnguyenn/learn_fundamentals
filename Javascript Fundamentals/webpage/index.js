@@ -103,3 +103,14 @@
 // }
 
 // hello(goodbye);
+
+sum = (callback, x, y) => {
+    let result = x + y;
+    callback(result);
+}
+
+displayConsole = (result) => {
+    console.log(result);
+}
+
+sum(displayConsole, 1, 2);
