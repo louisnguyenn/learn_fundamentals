@@ -104,17 +104,17 @@
 
 // hello(goodbye);
 
-sum = (callback, x, y) => {
-    let result = x + y;
-    callback(result);
-}
+// sum = (callback, x, y) => {
+//     let result = x + y;
+//     callback(result);
+// }
 
-displayConsole = (result) => {
-    console.log(result);
-}
+// displayConsole = (result) => {
+//     console.log(result);
+// }
 
-displayPage = (result) => {
-    document.getElementById("header").textContent = result;
-}
+// displayPage = (result) => {
+//     document.getElementById("header").textContent = result;
+// }
 
-sum(displayPage, 1, 2);
+// sum(displayPage, 1, 2);
