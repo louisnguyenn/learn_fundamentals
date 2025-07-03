@@ -118,3 +118,20 @@
 // }
 
 // sum(displayPage, 1, 2);
+
+// 3 types of functions
+
+// function Hello(){
+// }
+
+// const function = Hello(){
+// }
+
+// hello = () => {
+// }
+
+setTimeout(hello = (name) => {
+    console.log(`Hello ${name}`);
+}, 3000);
+
+hello("Louis");
