@@ -136,9 +136,9 @@
 
 // hello("Louis");
 
-const num = [1, 2, 3, 4, 5];
+// const num = [1, 2, 3, 4, 5];
 
-const square = num.map((e) =>
-    Math.pow(e, 2));
+// const square = num.map((e) =>
+//     Math.pow(e, 2));
 
-console.log(square);
+// console.log(square);
