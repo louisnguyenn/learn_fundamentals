@@ -130,8 +130,15 @@
 // hello = () => {
 // }
 
-setTimeout(hello = (name) => {
-    console.log(`Hello ${name}`);
-}, 3000);
+// setTimeout(hello = (name) => {
+//     console.log(`Hello ${name}`);
+// }, 3000);
 
-hello("Louis");
+// hello("Louis");
+
+const num = [1, 2, 3, 4, 5];
+
+const square = num.map((e) =>
+    Math.pow(e, 2));
+
+console.log(square);
