@@ -295,4 +295,6 @@ class Address {
 const person1 = new Person("Louis", 19, "132 Gees Way", "Kitchener", "Canada")
 const person2 = new Person("Kevin", 21, "01293 Cannel", "California", "USA")
 
-console.log(person1.address.city)
+for (const property in person1.address){
+    console.log(person1.address[property])
+}
