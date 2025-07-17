@@ -153,21 +153,33 @@ const person1 = {
     lastName: "Nguyen",
     age: 19,
     Employed: true,
+    // sayHello: function(){console.log("Hello!")},
+    sayHello: () => {console.log("Hello!")},
+    eat: () => {console.log("I'm eating Banh Mi")},
+
 }
 
-const person2= {
+const person2 = {
     firstName: "Kevin",
     lastName: "Nguyen",
     age: 21,
     Employed: false,
+    sayHello: function(){console.log("Hello! I'm Kevin")},
+    eat: () => {console.log("I'm at Seaside Bakery")}
 }
 
-console.log(person1.firstName);
-console.log(person1.lastName);
-console.log(person1.age);
-console.log(person1.Employed);
+person1.sayHello();
+person2.sayHello();
 
-console.log(person2.firstName);
-console.log(person2.lastName);
-console.log(person2.age);
-console.log(person2.Employed);
+person1.eat();
+person2.eat();
+
+// console.log(person1.firstName);
+// console.log(person1.lastName);
+// console.log(person1.age);
+// console.log(person1.Employed);
+
+// console.log(person2.firstName);
+// console.log(person2.lastName);
+// console.log(person2.age);
+// console.log(person2.Employed);
