@@ -148,31 +148,31 @@
             function()}
 */
 
-const person1 = {
-    firstName: "Louis",
-    lastName: "Nguyen",
-    age: 19,
-    Employed: true,
-    // sayHello: function(){console.log("Hello!")},
-    sayHello: () => {console.log("Hello!")},
-    eat: () => {console.log("I'm eating Banh Mi")},
+// const person1 = {
+//     firstName: "Louis",
+//     lastName: "Nguyen",
+//     age: 19,
+//     Employed: true,
+//     // sayHello: function(){console.log("Hello!")},
+//     sayHello: () => {console.log("Hello!")},
+//     eat: () => {console.log("I'm eating Banh Mi")},
 
-}
+// }
 
-const person2 = {
-    firstName: "Kevin",
-    lastName: "Nguyen",
-    age: 21,
-    Employed: false,
-    sayHello: function(){console.log("Hello! I'm Kevin")},
-    eat: () => {console.log("I'm at Seaside Bakery")}
-}
+// const person2 = {
+//     firstName: "Kevin",
+//     lastName: "Nguyen",
+//     age: 21,
+//     Employed: false,
+//     sayHello: function(){console.log("Hello! I'm Kevin")},
+//     eat: () => {console.log("I'm at Seaside Bakery")}
+// }
 
-person1.sayHello();
-person2.sayHello();
+// person1.sayHello();
+// person2.sayHello();
 
-person1.eat();
-person2.eat();
+// person1.eat();
+// person2.eat();
 
 // console.log(person1.firstName);
 // console.log(person1.lastName);
@@ -183,3 +183,37 @@ person2.eat();
 // console.log(person2.lastName);
 // console.log(person2.age);
 // console.log(person2.Employed);
+
+class Product {
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct(){
+        console.log(`Product: ${this.name}`)
+        console.log(`Price: ${this.price}`)
+    }
+
+    total(salesTax){
+        return this.price + (this.price * salesTax)
+    }
+}
+
+const salesTax = 0.13;
+
+const product1 = new Product("Shirt", 19.99);
+const product2 = new Product("Pants", 39.99);
+const product3 = new Product("Underwear", 190.99);
+
+product1.displayProduct();
+const total = product1.total(salesTax);
+console.log(`Total price with tax: $${total.toFixed(2)}`)
+
+product2.displayProduct();
+const total2 = product2.total(salesTax);
+console.log(`Total price with tax: $${total2.toFixed(2)}`)
+
+product3.displayProduct();
+const total3 = product3.total(salesTax);
+console.log(`Total price with tax: $${total3.toFixed(2)}`)
