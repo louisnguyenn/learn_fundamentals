@@ -346,16 +346,16 @@
 //     window.alert("Hello");
 // }, 3000);
 
-let timeoutID;
+// let timeoutID;
 
-function startTimer() {
-    const timeoutID = setTimeout(() => {
-        window.alert("Hello");
-        console.log("STARTED");
-    }, 3000)
-}
+// function startTimer() {
+//     const timeoutID = setTimeout(() => {
+//         window.alert("Hello");
+//         console.log("STARTED");
+//     }, 3000)
+// }
 
-function clearTimer() {
-    clearTimeout(timeoutID);
-    console.log("CLEARED");
-}
+// function clearTimer() {
+//     clearTimeout(timeoutID);
+//     console.log("CLEARED");
+// }
