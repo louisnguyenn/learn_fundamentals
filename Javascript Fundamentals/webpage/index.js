@@ -184,36 +184,92 @@
 // console.log(person2.age);
 // console.log(person2.Employed);
 
-class Product {
-    constructor(name, price){
-        this.name = name;
-        this.price = price;
+// class Product {
+//     constructor(name, price){
+//         this.name = name;
+//         this.price = price;
+//     }
+
+//     displayProduct(){
+//         console.log(`Product: ${this.name}`)
+//         console.log(`Price: ${this.price}`)
+//     }
+
+//     total(salesTax){
+//         return this.price + (this.price * salesTax)
+//     }
+// }
+
+// const salesTax = 0.13;
+
+// const product1 = new Product("Shirt", 19.99);
+// const product2 = new Product("Pants", 39.99);
+// const product3 = new Product("Underwear", 190.99);
+
+// product1.displayProduct();
+// const total = product1.total(salesTax);
+// console.log(`Total price with tax: $${total.toFixed(2)}`)
+
+// product2.displayProduct();
+// const total2 = product2.total(salesTax);
+// console.log(`Total price with tax: $${total2.toFixed(2)}`)
+
+// product3.displayProduct();
+// const total3 = product3.total(salesTax);
+// console.log(`Total price with tax: $${total3.toFixed(2)}`)
+
+// parent
+class Animal {
+    alive = true;
+
+    eat(){
+        console.log(`This ${this.name} is eating`);
     }
 
-    displayProduct(){
-        console.log(`Product: ${this.name}`)
-        console.log(`Price: ${this.price}`)
-    }
-
-    total(salesTax){
-        return this.price + (this.price * salesTax)
+    sleep(){
+        console.log(`This ${this.name} is sleeping`);
     }
 }
 
-const salesTax = 0.13;
+// child of animal
+class Rabbit extends Animal {
+    name = "rabbit";
+    run(){
+        console.log(`This ${this.name} is running`);
+    }
+}
 
-const product1 = new Product("Shirt", 19.99);
-const product2 = new Product("Pants", 39.99);
-const product3 = new Product("Underwear", 190.99);
+class Fish extends Animal {
+    name = "fish";
+    swim(){
+        console.log(`This ${this.name} is swimming`);
+    }
+}
 
-product1.displayProduct();
-const total = product1.total(salesTax);
-console.log(`Total price with tax: $${total.toFixed(2)}`)
+class Hawk extends Animal {
+    name = "hawk";
+    fly(){
+        console.log(`This ${this.name} is flying`);
+    }
+}
 
-product2.displayProduct();
-const total2 = product2.total(salesTax);
-console.log(`Total price with tax: $${total2.toFixed(2)}`)
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
 
-product3.displayProduct();
-const total3 = product3.total(salesTax);
-console.log(`Total price with tax: $${total3.toFixed(2)}`)
+// rabbit.alive = false 
+
+console.log(rabbit.alive)
+rabbit.eat()
+rabbit.sleep()
+rabbit.run()
+
+console.log(fish.alive)
+fish.eat()
+fish.sleep()
+fish.swim()
+
+console.log(hawk.alive)
+hawk.eat()
+hawk.sleep()
+hawk.fly()
