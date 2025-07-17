@@ -314,24 +314,48 @@
 
 // outer();
 
-counter = () => {
-    let count = 0;
+// counter = () => {
+//     let count = 0;
 
-    increment = () => {
-        count++;
-        console.log(`Count increased to ${count}`);
-    }
+//     increment = () => {
+//         count++;
+//         console.log(`Count increased to ${count}`);
+//     }
 
-    getCount = () => {
-        return count;
-    }
+//     getCount = () => {
+//         return count;
+//     }
 
-    return { increment, getCount };
+//     return { increment, getCount };
+// }
+
+// const count = counter();
+
+// count.increment();
+// count.increment();
+
+// console.log(`The current count is ${count.getCount()}.`)
+
+// set timeout function
+
+// sayHello = () => {
+//     window.alert("Hello");
+// }
+
+// setTimeout(() => {
+//     window.alert("Hello");
+// }, 3000);
+
+let timeoutID;
+
+function startTimer() {
+    const timeoutID = setTimeout(() => {
+        window.alert("Hello");
+        console.log("STARTED");
+    }, 3000)
 }
 
-const count = counter();
-
-count.increment();
-count.increment();
-
-console.log(`The current count is ${count.getCount()}.`)
+function clearTimer() {
+    clearTimeout(timeoutID);
+    console.log("CLEARED");
+}
