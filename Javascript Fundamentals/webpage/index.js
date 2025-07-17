@@ -276,25 +276,62 @@
 // hawk.sleep()
 // hawk.fly()
 
-class Person {
-    constructor(name, age, ...address){
-        this.name = name;
-        this.age = age;
-        this.address = new Address(...address);
+// class Person {
+//     constructor(name, age, ...address){
+//         this.name = name;
+//         this.age = age;
+//         this.address = new Address(...address);
+//     }
+// }
+
+// class Address {
+//     constructor(street, city, country){
+//         this.street = street;
+//         this.city = city;
+//         this.country = country;
+//     }
+// }
+
+// const person1 = new Person("Louis", 19, "132 Gees Way", "Kitchener", "Canada")
+// const person2 = new Person("Kevin", 21, "01293 Cannel", "California", "USA")
+
+// for (const property in person1.address){
+//     console.log(person1.address[property])
+// }
+
+// closure
+
+// function outer(){
+
+//     let message = "Hello";
+
+//     function inner(){
+//         console.log(message);
+//     }
+
+//     inner();
+// }
+
+// outer();
+
+counter = () => {
+    let count = 0;
+
+    increment = () => {
+        count++;
+        console.log(`Count increased to ${count}`);
     }
-}
 
-class Address {
-    constructor(street, city, country){
-        this.street = street;
-        this.city = city;
-        this.country = country;
+    getCount = () => {
+        return count;
     }
+
+    return { increment, getCount };
 }
 
-const person1 = new Person("Louis", 19, "132 Gees Way", "Kitchener", "Canada")
-const person2 = new Person("Kevin", 21, "01293 Cannel", "California", "USA")
+const count = counter();
 
-for (const property in person1.address){
-    console.log(person1.address[property])
-}
+count.increment();
+count.increment();
+
+console.log(`The current count is ${count.getCount()}.`)
