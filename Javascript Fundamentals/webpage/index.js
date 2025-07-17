@@ -218,58 +218,81 @@
 // const total3 = product3.total(salesTax);
 // console.log(`Total price with tax: $${total3.toFixed(2)}`)
 
+// this = this object
+
 // parent
-class Animal {
-    alive = true;
+// class Animal {
+//     alive = true;
 
-    eat(){
-        console.log(`This ${this.name} is eating`);
-    }
+//     eat(){
+//         console.log(`This ${this.name} is eating`);
+//     }
 
-    sleep(){
-        console.log(`This ${this.name} is sleeping`);
+//     sleep(){
+//         console.log(`This ${this.name} is sleeping`);
+//     }
+// }
+
+// // child of animal
+// class Rabbit extends Animal {
+//     name = "rabbit";
+//     run(){
+//         console.log(`This ${this.name} is running`);
+//     }
+// }
+
+// class Fish extends Animal {
+//     name = "fish";
+//     swim(){
+//         console.log(`This ${this.name} is swimming`);
+//     }
+// }
+
+// class Hawk extends Animal {
+//     name = "hawk";
+//     fly(){
+//         console.log(`This ${this.name} is flying`);
+//     }
+// }
+
+// const rabbit = new Rabbit();
+// const fish = new Fish();
+// const hawk = new Hawk();
+
+// // rabbit.alive = false 
+
+// console.log(rabbit.alive)
+// rabbit.eat()
+// rabbit.sleep()
+// rabbit.run()
+
+// console.log(fish.alive)
+// fish.eat()
+// fish.sleep()
+// fish.swim()
+
+// console.log(hawk.alive)
+// hawk.eat()
+// hawk.sleep()
+// hawk.fly()
+
+class Person {
+    constructor(name, age, ...address){
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
     }
 }
 
-// child of animal
-class Rabbit extends Animal {
-    name = "rabbit";
-    run(){
-        console.log(`This ${this.name} is running`);
+class Address {
+    constructor(street, city, country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
     }
 }
 
-class Fish extends Animal {
-    name = "fish";
-    swim(){
-        console.log(`This ${this.name} is swimming`);
-    }
-}
+const person1 = new Person("Louis", 19, "132 Gees Way", "Kitchener", "Canada")
+const person2 = new Person("Kevin", 21, "01293 Cannel", "California", "USA")
 
-class Hawk extends Animal {
-    name = "hawk";
-    fly(){
-        console.log(`This ${this.name} is flying`);
-    }
-}
-
-const rabbit = new Rabbit();
-const fish = new Fish();
-const hawk = new Hawk();
-
-// rabbit.alive = false 
-
-console.log(rabbit.alive)
-rabbit.eat()
-rabbit.sleep()
-rabbit.run()
-
-console.log(fish.alive)
-fish.eat()
-fish.sleep()
-fish.swim()
-
-console.log(hawk.alive)
-hawk.eat()
-hawk.sleep()
-hawk.fly()
+console.log(person1.address.city)
