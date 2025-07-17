@@ -142,3 +142,32 @@
 //     Math.pow(e, 2));
 
 // console.log(square);
+
+// objects
+/* object = {key:value,
+            function()}
+*/
+
+const person1 = {
+    firstName: "Louis",
+    lastName: "Nguyen",
+    age: 19,
+    Employed: true,
+}
+
+const person2= {
+    firstName: "Kevin",
+    lastName: "Nguyen",
+    age: 21,
+    Employed: false,
+}
+
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.Employed);
+
+console.log(person2.firstName);
+console.log(person2.lastName);
+console.log(person2.age);
+console.log(person2.Employed);
