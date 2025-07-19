@@ -368,6 +368,6 @@
 
 // element.style.backgroundColor = "yellow";
 
-const fruits = document. querySelectorAll(".fruits");
+// const fruits = document. querySelectorAll(".fruits");
 
-fruits[2].style.backgroundColor = "yellow";
+// fruits[2].style.backgroundColor = "yellow";
