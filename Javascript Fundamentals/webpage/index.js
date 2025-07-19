@@ -474,71 +474,71 @@
 // });
 
 // async and await
-function walkDog() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const dogWalked = true;
+// function walkDog() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const dogWalked = true;
 
-            if (dogWalked) {
-                resolve("You walk the dog");
-            }
-            else {
-                reject("You didn't walk the dog");
-            }
-        }, 1500);
-    });
-}
+//             if (dogWalked) {
+//                 resolve("You walk the dog");
+//             }
+//             else {
+//                 reject("You didn't walk the dog");
+//             }
+//         }, 1500);
+//     });
+// }
 
-function cleanKitchen() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const kitchenCleaned = true;
+// function cleanKitchen() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const kitchenCleaned = true;
 
-            if (kitchenCleaned) {
-                resolve("You clean the kitchen");
-            }
-            else {
-                reject("You didn't clean the kitchen")
-            }
-        }, 2500);
-    });
-}
+//             if (kitchenCleaned) {
+//                 resolve("You clean the kitchen");
+//             }
+//             else {
+//                 reject("You didn't clean the kitchen")
+//             }
+//         }, 2500);
+//     });
+// }
 
-function takeoutTrash() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const trashOut = true;
+// function takeoutTrash() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const trashOut = true;
 
-            if (trashOut) {
-                resolve("You take out the trash");
-            }
-            else {
-                reject("You didn't take out the trash");
-            }
-        }, 500);
-    });
-}
+//             if (trashOut) {
+//                 resolve("You take out the trash");
+//             }
+//             else {
+//                 reject("You didn't take out the trash");
+//             }
+//         }, 500);
+//     });
+// }
 
-async function doChores() {
-    try {
-        const walkDogResult = await walkDog();
-        console.log(walkDogResult);
+// async function doChores() {
+//     try {
+//         const walkDogResult = await walkDog();
+//         console.log(walkDogResult);
 
-        const cleanKitchenResult = await cleanKitchen();
-        console.log(cleanKitchenResult);
+//         const cleanKitchenResult = await cleanKitchen();
+//         console.log(cleanKitchenResult);
 
-        const trashResult = await takeoutTrash();
-        console.log(trashResult);
+//         const trashResult = await takeoutTrash();
+//         console.log(trashResult);
 
-        console.log("You finished all the chores");
-    }
-    catch(error) {
-        console.error(error);
-    }
+//         console.log("You finished all the chores");
+//     }
+//     catch(error) {
+//         console.error(error);
+//     }
 
-}
+// }
 
-doChores();
+// doChores();
 
 // walkDog()
 //     .then((value) => {
