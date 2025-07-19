@@ -371,3 +371,29 @@
 // const fruits = document. querySelectorAll(".fruits");
 
 // fruits[2].style.backgroundColor = "yellow";
+
+// mouse events
+// .addEventListener(event, function)
+const myBox = document.getElementById("box");
+const myButton = document.getElementById("button");
+
+// changeColor = (event) => {
+//     // event.target.style.backgroundColor = "tomato";
+//     // event.target.textContent = "Hello";
+//     // console.log(event);
+// }
+
+myButton.addEventListener("click", (event) => {
+    myBox.style.backgroundColor = "tomato";
+    myBox.textContent = "Hello Sir";
+});
+
+myButton.addEventListener("mouseover", (event) => {
+    myBox.style.backgroundColor = "yellow";
+    myBox.textContent = "Hi Bob";
+});
+
+myButton.addEventListener("mouseout", (event) => {
+    myBox.style.backgroundColor = "lightgreen";
+    myBox.textContent = "Click Me";
+});
