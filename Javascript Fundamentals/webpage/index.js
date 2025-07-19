@@ -359,3 +359,15 @@
 //     clearTimeout(timeoutID);
 //     console.log("CLEARED");
 // }
+
+// element selectors
+// const header = document.getElementById("my-heading");
+// header.style.backgroundColor = "yellow";
+
+// const element = document.querySelector(".fruits");
+
+// element.style.backgroundColor = "yellow";
+
+const fruits = document. querySelectorAll(".fruits");
+
+fruits[2].style.backgroundColor = "yellow";
