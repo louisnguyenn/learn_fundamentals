@@ -403,31 +403,72 @@
 // Promise((resolve, reject) => {some code})
 
 // doing these chores IN ORDER
-walkDog = (callback) => {
-    setTimeout(() => {
-        console.log("You walk the dog");
-        callback();
-    }, 1500);
+walkDog = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dogWalked = true;
+
+            if (dogWalked) {
+                resolve("You walk the dog");
+            }
+            else {
+                reject("You didn't walk the dog");
+            }
+        }, 1500);
+    });
 }
 
-cleanKitchen = (callback) => {
-    setTimeout(() => {
-        console.log("You clean the kitchen");
-        callback();
-    }, 2500);
+cleanKitchen = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const kitchenCleaned = true;
+
+            if (kitchenCleaned) {
+                resolve("You clean the kitchen");
+            }
+            else {
+                reject("You didn't clean the kitchen")
+            }
+        }, 2500);
+    });
 }
 
-takeoutTrash = (callback) => {
-    setTimeout(() => {
-        console.log("You take out the trash");
-        callback();
-    }, 500);
+takeoutTrash = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const trashOut = true;
+
+            if (trashOut) {
+                resolve("You take out the trash");
+            }
+            else {
+                reject("You didn't take out the trash");
+            }
+        }, 500);
+    });
 }
 
-walkDog(() => {
-    cleanKitchen(() => {
-        takeoutTrash(() => {
-            console.log("You finished all the chores!");
-        })
+walkDog()
+    .then((value) => { 
+        console.log(value); 
+        return cleanKitchen();
     })
-});
+    .then((value) => { 
+        console.log(value);
+        return takeoutTrash();
+    })
+    .then((value) => { 
+        console.log(value); 
+        console.log(`You finished all the chores!`); 
+    })
+    .catch((error) => { 
+        console.error(error);
+    });
+
+// walkDog(() => {
+//     cleanKitchen(() => {
+//         takeoutTrash(() => {
+//             console.log("You finished all the chores!");
+//         })
+//     })
+// });
