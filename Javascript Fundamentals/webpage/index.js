@@ -556,3 +556,7 @@
 //     .catch((error) => {
 //         console.error(error);
 //     });
+
+const names = ["Spongebob", "Patrick", "Sandy", "Mr.Krabs"]
+
+const jsonString = JSON.stringify(names);
