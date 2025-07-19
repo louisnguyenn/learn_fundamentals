@@ -557,6 +557,63 @@
 //         console.error(error);
 //     });
 
-const names = ["Spongebob", "Patrick", "Sandy", "Mr.Krabs"]
+// const names = ["Spongebob", "Patrick", "Sandy", "Mr.Krabs"]
 
-const jsonString = JSON.stringify(names);
+// const jsonString = JSON.stringify(names);
+
+// fetch
+// fetch("https://pokeapi.co/api/v2/pokemon/zekrom")
+//     .then((response) => {
+//         if (!response.ok) {
+//             throw new Error("Could not fetch resource");
+//         }
+        
+//         return response.json()
+//     })
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((error) => {
+//         console.error(error);
+//     });
+
+// using async and await
+// async function fetchData(){
+//     try {
+//         const response = await fetch("https://pokeapi.co/api/v2/pokemon/zekrom")
+
+//         if (!response.ok) {
+//             throw new Error ("Could not fetch resource")
+//         }
+
+//         const data = await response.json();
+//         console.log(data);
+//     }
+//     catch(error) {
+//         console.error(error);
+//     }
+// }
+
+// fetchData();
+
+async function fetchData(){
+    try {
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+
+        if (!response.ok) {
+            throw new Error ("Could not fetch resource")
+        }
+
+        const data = await response.json();
+        const pokemonSprite = data.sprites.front_default;
+        const imgElement = document.getElementById("sprite");
+
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "block";
+        // console.log(data);
+    }
+    catch(error) {
+        console.error(error);
+    }
+}
