@@ -374,26 +374,60 @@
 
 // mouse events
 // .addEventListener(event, function)
-const myBox = document.getElementById("box");
-const myButton = document.getElementById("button");
+// const myBox = document.getElementById("box");
+// const myButton = document.getElementById("button");
 
-// changeColor = (event) => {
-//     // event.target.style.backgroundColor = "tomato";
-//     // event.target.textContent = "Hello";
-//     // console.log(event);
-// }
+// // changeColor = (event) => {
+// //     // event.target.style.backgroundColor = "tomato";
+// //     // event.target.textContent = "Hello";
+// //     // console.log(event);
+// // }
 
-myButton.addEventListener("click", (event) => {
-    myBox.style.backgroundColor = "tomato";
-    myBox.textContent = "Hello Sir";
-});
+// myButton.addEventListener("click", (event) => {
+//     myBox.style.backgroundColor = "tomato";
+//     myBox.textContent = "Hello Sir";
+// });
 
-myButton.addEventListener("mouseover", (event) => {
-    myBox.style.backgroundColor = "yellow";
-    myBox.textContent = "Hi Bob";
-});
+// myButton.addEventListener("mouseover", (event) => {
+//     myBox.style.backgroundColor = "yellow";
+//     myBox.textContent = "Hi Bob";
+// });
 
-myButton.addEventListener("mouseout", (event) => {
-    myBox.style.backgroundColor = "lightgreen";
-    myBox.textContent = "Click Me";
+// myButton.addEventListener("mouseout", (event) => {
+//     myBox.style.backgroundColor = "lightgreen";
+//     myBox.textContent = "Click Me";
+// });
+
+// promises
+// "i promise to return a value"
+// Promise((resolve, reject) => {some code})
+
+// doing these chores IN ORDER
+walkDog = (callback) => {
+    setTimeout(() => {
+        console.log("You walk the dog");
+        callback();
+    }, 1500);
+}
+
+cleanKitchen = (callback) => {
+    setTimeout(() => {
+        console.log("You clean the kitchen");
+        callback();
+    }, 2500);
+}
+
+takeoutTrash = (callback) => {
+    setTimeout(() => {
+        console.log("You take out the trash");
+        callback();
+    }, 500);
+}
+
+walkDog(() => {
+    cleanKitchen(() => {
+        takeoutTrash(() => {
+            console.log("You finished all the chores!");
+        })
+    })
 });
