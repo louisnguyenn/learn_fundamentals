@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // const Person = (props) => {
 //   return (
@@ -16,6 +16,12 @@ const App = () => {
   // const isNameShowing = true;
   // const isUserLoggedIn = true;
   const [counter, setCounter] = useState(0);  // provide initial value in the function
+
+  useEffect(() => {
+    alert("You've changed the counter to " + counter);
+    // setCounter(100);
+  }, [counter]); // this makes the useEffect happen only once
+          // if we add counter as a dependency it will always set the counter back to 100 resulting in an infinite loop
 
   return (
     <div className="App">
