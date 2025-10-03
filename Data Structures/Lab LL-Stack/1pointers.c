@@ -31,7 +31,8 @@ int main()
     // Set every pointer to one array element
     for (i = 0; i < 5; i++)
     {
-        *P[i] = A[i];
+        P[i] = &A[i];
+        // printf("%d\t", *P[i]);
         // printf("%d\t", A[i]);
     }
 
