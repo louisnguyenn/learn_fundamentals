@@ -55,6 +55,7 @@ int main()
 {
     struct Node *head;
     struct Node *temp;
+    struct Node *successor;
     struct Node *newList;
     struct Node *newNode;
     int i = 0;
@@ -64,7 +65,7 @@ int main()
     head->data = 1;
     temp = head;
 
-    for (i = 1; i < 5; i++)
+    for (i = 1; i < 4; i++)
     {
         newList = malloc(sizeof(struct Node));
         newList->data = i + 1;
@@ -87,9 +88,11 @@ int main()
         temp = temp->next;
     }
 
-    // printList(head);
-
+    successor = temp->next;
     temp->next = newNode;
+    newNode->next = successor;
+
+    printList(head);
 
     // delete the last node in the linked list
     // deleteLastNode(head);
