@@ -84,12 +84,32 @@
 
 // type Metric = 'cm' | 'inch';
 
-function greet(name: string | null | undefined) {
-  if (name) {
-    console.log(name.toUpperCase());
-  } else {
-    console.log('Hola!');
-  }
+// function greet(name: string | null | undefined) {
+//   if (name) {
+//     console.log(name.toUpperCase());
+//   } else {
+//     console.log('Hola!');
+//   }
+// }
+
+// greet(null);
+
+type Customer = {
+  birthday?: Date;
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : { birthday: new Date() };
 }
 
-greet(null);
+let customer = getCustomer(0);
+// optional property access operator
+console.log(customer?.birthday?.getFullYear());
+
+// optional element access operator
+// if (customers !== null && customers !== undefined)
+// customers?.[0]
+
+// optional call operator
+let log: any = null;
+log?.('a');
