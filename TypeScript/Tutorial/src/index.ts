@@ -62,17 +62,24 @@
 // kgToLbs(10);
 // kgToLbs('10kg');
 
-type Draggable = {
-  drag: () => void;
-};
+// type Draggable = {
+//   drag: () => void;
+// };
 
-type Resizeable = {
-  resize: () => void;
-};
+// type Resizeable = {
+//   resize: () => void;
+// };
 
-type UIWidget = Draggable & Resizeable;
+// type UIWidget = Draggable & Resizeable;
 
-let textBox: UIWidget = {
-  drag: () => {},
-  resize: () => {},
-};
+// let textBox: UIWidget = {
+//   drag: () => {},
+//   resize: () => {},
+// };
+
+// Literal (exact, specific) value
+type Quantity = 50 | 100;
+
+let quantity: Quantity = 100;
+
+type Metric = 'cm' | 'inch';
